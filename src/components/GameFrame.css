@@ -1,0 +1,78 @@
+.game-frame {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--sp-5) var(--sp-4) var(--sp-8);
+}
+
+.game-frame__header {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-3) 0 var(--sp-5);
+}
+
+.game-frame__back {
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+.game-frame__back:hover { color: var(--cyan); }
+
+.game-frame__title {
+  font-size: 20px;
+  color: var(--text);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.game-frame__header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-left: auto;
+}
+
+.game-frame__mute, .game-frame__pause {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  border-radius: var(--radius-sm);
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+.game-frame__mute:hover, .game-frame__pause:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.game-frame__stage {
+  position: relative;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+  padding: var(--sp-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-frame__stage--pink  { border-top: 2px solid var(--pink); }
+.game-frame__stage--cyan  { border-top: 2px solid var(--cyan); }
+.game-frame__stage--amber { border-top: 2px solid var(--amber); }
+.game-frame__stage--violet { border-top: 2px solid var(--violet); }
+.game-frame__stage--sky { border-top: 2px solid var(--sky); }
+
+@media (max-width: 640px) {
+  .game-frame__title { position: static; transform: none; order: -1; width: 100%; text-align: center; margin-bottom: var(--sp-2); }
+  .game-frame__header { flex-wrap: wrap; }
+}

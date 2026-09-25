@@ -1,0 +1,62 @@
+/* ============================================================
+   DESIGN TOKENS — "Carnival Midway" arcade identity
+   One place to change color/type/spacing for the whole site.
+   Direction: a bright, warm arcade midway at golden hour — a rich
+   plum-navy backdrop (not black) with five saturated poster colors
+   doing the work, instead of neon glow. Flat, confident color
+   blocks + soft warm shadows, no glow/blur effects. Display type
+   borrowed from hand-painted sign lettering (Bungee), body type a
+   clean geometric grotesk (Space Grotesk).
+   ============================================================ */
+:root {
+  /* Color */
+  --bg: #221a35;
+  --bg-panel: #2c2348;
+  --bg-panel-raised: #362a58;
+  --border: #4a3d70;
+  --border-soft: #392f57;
+  --text: #fdf9f3;
+  --text-dim: #c3b8dd;
+  --text-faint: #8a7eae;
+
+  /* Five poster accent colors — one per game, used consistently */
+  --pink: #ff5d73;    /* coral — Breakout */
+  --cyan: #21c4b6;    /* teal — Snake */
+  --amber: #ffb627;   /* marigold — Pong */
+  --violet: #9b6bff;  /* grape — Tetris */
+  --sky: #3fa9f5;     /* sky blue — Blaster */
+
+  --success: #4cd97b;
+  --danger: #ff5c5c;
+
+  /* Type */
+  --font-display: 'Bungee', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', system-ui, sans-serif;
+
+  /* Spacing scale (4px base) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+
+  /* Radius — used consistently, not per-component guesswork */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  /* Soft warm shadows — colored but not glowing (no blur haze) */
+  --soft-pink: 0 10px 24px -8px rgba(255, 93, 115, 0.55);
+  --soft-cyan: 0 10px 24px -8px rgba(33, 196, 182, 0.5);
+  --soft-amber: 0 10px 24px -8px rgba(255, 182, 39, 0.5);
+  --soft-violet: 0 10px 24px -8px rgba(155, 107, 255, 0.5);
+  --soft-sky: 0 10px 24px -8px rgba(63, 169, 245, 0.5);
+
+  --shadow-panel: 0 10px 32px rgba(15, 10, 28, 0.5);
+
+  --transition-fast: 140ms ease;
+  --transition-med: 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}

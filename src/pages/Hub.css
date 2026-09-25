@@ -1,0 +1,66 @@
+.hub {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--sp-8) var(--sp-5) var(--sp-8);
+}
+
+.hub__hero {
+  margin-bottom: var(--sp-7);
+}
+
+.hub__title {
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1;
+  /* a warm multi-color gradient fill instead of a neon glow —
+     one deliberate colorful moment, not repeated anywhere else */
+  background: linear-gradient(100deg, var(--pink) 0%, var(--amber) 35%, var(--cyan) 68%, var(--violet) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hub__subtitle {
+  margin-top: var(--sp-3);
+  color: var(--text-dim);
+  font-size: 16px;
+  max-width: 46ch;
+}
+
+/* Asymmetric layout: one large featured card, one tall "side" card,
+   and three even cards along the bottom row — deliberately not a
+   uniform grid of identical boxes. */
+.hub__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "feat feat side"
+    "a    b    c";
+  gap: var(--sp-5);
+}
+
+.hub__slot--featured { grid-area: feat; }
+.hub__grid > .hub__slot:nth-child(2) { grid-area: side; }
+.hub__grid > .hub__slot:nth-child(3) { grid-area: a; }
+.hub__grid > .hub__slot:nth-child(4) { grid-area: b; }
+.hub__grid > .hub__slot:nth-child(5) { grid-area: c; }
+
+.hub__grid .game-card { height: 100%; }
+
+.hub__footer {
+  margin-top: var(--sp-8);
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
+@media (max-width: 780px) {
+  .hub__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "feat"
+      "side"
+      "a"
+      "b"
+      "c";
+  }
+}

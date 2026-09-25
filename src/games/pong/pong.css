@@ -1,0 +1,6 @@
+.pong-canvas {
+  display: block;
+  background: #2c2348;
+  border-radius: var(--radius-md);
+  touch-action: none;
+}

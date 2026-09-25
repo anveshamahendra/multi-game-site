@@ -1,0 +1,49 @@
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
+}
+.game-card:hover {
+  transform: translateY(-4px);
+}
+
+.game-card--pink:hover   { box-shadow: var(--soft-pink); border-color: var(--pink); }
+.game-card--cyan:hover   { box-shadow: var(--soft-cyan); border-color: var(--cyan); }
+.game-card--amber:hover  { box-shadow: var(--soft-amber); border-color: var(--amber); }
+.game-card--violet:hover { box-shadow: var(--soft-violet); border-color: var(--violet); }
+.game-card--sky:hover    { box-shadow: var(--soft-sky); border-color: var(--sky); }
+
+.game-card__preview {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+}
+.game-card--featured .game-card__preview { aspect-ratio: 16 / 8; }
+
+.game-card__meta {
+  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.game-card__title {
+  font-size: 17px;
+  color: var(--text);
+}
+.game-card--featured .game-card__title { font-size: 22px; }
+
+.game-card__tagline {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.game-card__best {
+  margin-top: var(--sp-2);
+  font-size: 11px;
+  color: var(--amber);
+  letter-spacing: 0.5px;
+}

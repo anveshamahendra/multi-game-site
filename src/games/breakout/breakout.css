@@ -1,0 +1,25 @@
+.breakout-canvas {
+  display: block;
+  background: #2c2348;
+  border-radius: var(--radius-md);
+  touch-action: none;
+}
+
+.breakout-hint {
+  margin-top: var(--sp-3);
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 12px;
+}
+
+.breakout-lives {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: var(--sp-2);
+}
+.breakout-life {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--pink);
+}
+.breakout-life--lost { background: var(--border); }

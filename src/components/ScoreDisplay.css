@@ -1,0 +1,34 @@
+.score-display {
+  display: flex;
+  gap: var(--sp-6);
+}
+.score-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 64px;
+}
+.score-block--best { align-items: flex-end; }
+
+.score-label {
+  font-size: 11px;
+  color: var(--text-faint);
+  letter-spacing: 1.5px;
+}
+
+.score-value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--cyan);
+  line-height: 1.3;
+}
+.score-value--best { color: var(--amber); }
+
+.score-value--pulse {
+  animation: score-pop 220ms ease;
+}
+@keyframes score-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,14 @@
+.blaster-canvas {
+  display: block;
+  background: #241a3d;
+  border-radius: var(--radius-md);
+  touch-action: none;
+}
+.blaster-lives {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: var(--sp-2);
+}
+.blaster-life { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); }
+.blaster-life--lost { background: var(--border); }
